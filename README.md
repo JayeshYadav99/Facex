@@ -19,8 +19,7 @@ Place the images in a subdirectory within the dataset directory, e.g. dataset/jo
 
 Open the attendance_system.py file and modify the following lines of code to match the names and locations of your dataset:
 
-python
-Copy code
+
 emp1_image = face_recognition.load_image_file("dataset/emp1/1.jpg")
 emp1_encoding = face_recognition.face_encodings(emp1_image)[0]
 emp2_image = face_recognition.load_image_file("dataset/emp2/1.jpg")
@@ -32,16 +31,14 @@ known_faces_names = ["emp1","emp2"]
 Change emp1, emp2, and 1.jpg to match the names of your dataset subdirectory and images.
 
 If you want to use your own video file, change the following line of code to the path of your video file:
-python
-Copy code
+
 video_capture = cv2.VideoCapture("video.mp4")
 Alternatively, if you want to use a webcam to capture footage, change the following line of code:
 
-python
-Copy code
+
 video_capture = cv2.VideoCapture(0)
 Run the attendance_system.py script by typing the following command in your terminal:
-Copy code
+
 python attendance_system.py
 The script will start capturing footage and recognizing faces. If a recognized face matches a name in your dataset, the person's name will be displayed on the screen along with a "Present" message. The script will also write the person's name and the current time to a CSV file in the current directory.
 Conclusion
